@@ -33,7 +33,6 @@
 }
 .event-banner-title {
   position: relative;
-  margin-bottom: 2.5rem;
 }
 
 .event-img-wrapper {
@@ -93,8 +92,13 @@
   right: var(--side-offset);
 }
 
+.event-content-container > p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
 .event-content-container > * + * {
-  margin-top: 1.5rem;
+  margin-top: .7rem;
 }
 
 .cta-text {
