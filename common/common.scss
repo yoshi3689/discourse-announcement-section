@@ -28,7 +28,7 @@
   background-color: var(--psuedo-ele-clr);
   height: 2px;
   width: 9%;
-  bottom: -9px;
+  bottom: -11px;
   left: 0;
 }
 .event-banner-title {
@@ -103,7 +103,7 @@
   margin-top: .7rem;
 }
 
-.cta-text {
+.event-content-container .cta-text {
   text-decoration: none;
   display: block;
   color: inherit;
