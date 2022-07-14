@@ -4,12 +4,19 @@
   margin: 0;
   padding: 0;
 }
+
+.announcement {
+  background-color: #94C367;
+}
+
+.announcement .custom-container {
+  padding: 0;
+}
 .event-banner {
   font-family: "Roboto Slab";
 }
 .event-body-wrapper {
   --psuedo-ele-clr: rgb(221, 222, 227);
-  width: 80%;
   margin: auto;
   padding: 3rem 0;
   color: #fff;
@@ -27,11 +34,6 @@
 .event-banner-title {
   position: relative;
   margin-bottom: 2.5rem;
-}
-
-
-.announcement {
-  background-color: #94C367;
 }
 
 .event-img-wrapper {
@@ -93,10 +95,6 @@
 
 .event-content-container > * + * {
   margin-top: 1.5rem;
-}
-
-.event-content-container > p {
-  color: var(--psuedo-ele-clr);
 }
 
 .cta-text {
