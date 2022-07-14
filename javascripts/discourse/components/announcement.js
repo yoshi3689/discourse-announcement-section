@@ -46,7 +46,7 @@ export default Component.extend({
   @observes("shouldDisplay")
   displayChanged() {
     document.documentElement.classList.toggle(
-      "display-card-nav",
+      "display-announcement-section",
       this.shouldDisplay
     );
   },
@@ -56,6 +56,6 @@ export default Component.extend({
   },
 
   didDestroyElement() {
-    document.documentElement.classList.remove("display-card-nav");
+    document.documentElement.classList.remove("display-announcement-section");
   },
 });
