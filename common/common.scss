@@ -146,6 +146,10 @@
   cursor: pointer;
 }
 
+.dot-active {
+  color: #fff;
+}
+
 @media screen and (min-width: 800px) {
   .event-body-container {
     display: grid;
