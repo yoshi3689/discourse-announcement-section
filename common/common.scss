@@ -147,6 +147,7 @@
   }
 
   .event-body-container::after, .event-body-container::before {
+    display: block;
     --side-offset: -2rem;
     position: absolute;
     font-size: 1.5rem;
