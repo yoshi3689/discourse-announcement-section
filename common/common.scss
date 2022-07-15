@@ -85,7 +85,7 @@
 //   width: 80vw;
 // }
 
-.withSwitch::after, .withSwitch::before {
+.event-body-container::after, .event-body-container::before {
   --side-offset: -2rem;
   position: absolute;
   font-size: 1.5rem;
@@ -94,11 +94,11 @@
   cursor: pointer;
 }
 
-.withSwitch::before {
+.event-body-container::before {
   content: "<";
   left: var(--side-offset);
 }
-.withSwitch::after {
+.event-body-container::after {
   content: ">";
   position: absolute;
   right: var(--side-offset);
