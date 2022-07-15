@@ -15,12 +15,6 @@
 .event-banner {
   font-family: "Roboto Slab";
 }
-.event-body-wrapper {
-  --psuedo-ele-clr: rgb(221, 222, 227);
-  margin: auto;
-  padding: 3rem 0;
-  color: #fff;
-}
 
 .event-banner-title::after {
   content: "";
@@ -70,6 +64,12 @@
 
 .event-content-container {
   grid-column: 3;
+}
+.event-body-wrapper {
+  --psuedo-ele-clr: rgb(221, 222, 227);
+  margin: auto;
+  padding: 3rem 0;
+  color: #fff;
 }
 
 .event-body-container::after, .event-body-container::before {
