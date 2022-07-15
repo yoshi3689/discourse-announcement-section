@@ -81,9 +81,9 @@
   width: max-content;
 }
 
-.event-body-container {
-  width: 80vw;
-}
+// .event-body-container {
+//   width: 80vw;
+// }
 
 .event-body-container::after, .event-body-container::before {
   --side-offset: -2rem;
