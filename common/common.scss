@@ -133,6 +133,7 @@
   width: 70%;
   height: 50px;
   text-align: center;
+  list-style-type: none;
 }
 
 .dot-wrapper {
@@ -152,6 +153,12 @@
     align-items: center;
     position: relative;
   } 
+  .event-body-container::after, .event-body-container::before {
+    display: none;
+  }
+  .dots {
+    display: none;
+  }
 }
 
 // @keyframes tonext {
