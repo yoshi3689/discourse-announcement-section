@@ -71,6 +71,7 @@
   margin: auto;
   padding: 3rem 0;
   color: #fff;
+  overflow: hidden;
 }
 
 .withSwitch {
@@ -78,7 +79,6 @@
   flex-direction: row;
   gap: 1rem;
   width: max-content;
-  overflow: hidden;
 }
 
 .event-body-container::after, .event-body-container::before {
