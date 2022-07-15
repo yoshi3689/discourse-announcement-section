@@ -142,9 +142,9 @@
     align-items: center;
     position: relative;
   } 
-  .dots {
-    display: none;
-  }
+  // .dots {
+  //   display: none;
+  // }
 
   .event-body-container::after, .event-body-container::before {
     display: block;
