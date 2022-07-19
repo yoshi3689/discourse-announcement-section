@@ -19,7 +19,7 @@ export default {
           slide.style.left = `${slideWidth * i}px`;
         });
         nextBtn.addEventListener('click', (e) => {
-          const currentSlide = track.querySelector('currentSlide');
+          const currentSlide = track.querySelector('.currentSlide');
           const nextSlide = currentSlide.nextElementSibling;
           // move to the next slide
           const amountToMove = nextSlide.style.left;
