@@ -8,6 +8,7 @@
 .announcement {
   background-color: #94C367;
   position: relative;
+  padding-top: 5%;
 }
 
 .announcement .custom-container {
@@ -42,6 +43,7 @@
   top: 50%;
   transform: translateY(-50%);
   background: transparent;
+  font-size: 1.7rem;
   border: 0;
 }
 
@@ -52,6 +54,10 @@
   right: 10px;
 }
 
+.event-banner-title {
+  position: relative;
+  margin: 0;
+}
 .event-banner-title::after {
   content: "";
   position: absolute;
@@ -61,10 +67,7 @@
   bottom: -11px;
   left: 0;
 }
-.event-banner-title {
-  position: relative;
-  margin: 0;
-}
+
 
 .event-img-wrapper {
   display: block;
