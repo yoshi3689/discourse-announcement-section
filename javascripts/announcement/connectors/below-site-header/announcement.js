@@ -17,7 +17,7 @@ export default {
           const dots = dotsNav? Array.from(dotsNav.children) : null;
           const flagClassName = 'currentSlide';
   
-          const slideWidth = slides[0].getBoundingClientRect().width;
+          const slideWidth = slides? slides[0].getBoundingClientRect().width : null;
           slides.forEach((slide, i) => {
             slide.style.left = `${slideWidth * i}px`;
           });
