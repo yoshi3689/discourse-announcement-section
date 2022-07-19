@@ -21,7 +21,6 @@ export default {
 
           const moveIndex = offset => {
             const targetIndex = currentIndex + offset;
-            console.log(targetIndex);
             if (targetIndex < 0) {
               currentIndex = slides.length - 1;
             } else if (targetIndex > slides.length - 1) {
@@ -30,8 +29,9 @@ export default {
               currentIndex = targetIndex;
             }
           }
-  
-          let slideWidth = slides? slides[0].getBoundingClientRect().width : null;  
+          // will come back and change these later
+          if (dots && slides && prevBtn && nextBtn &&dotsNav) {
+            let slideWidth = slides? slides[0].getBoundingClientRect().width : null;  
           document.addEventListener('resize', e => {
             slideWidth = slides? slides[0].getBoundingClientRect().width : null;  
           });
@@ -42,8 +42,6 @@ export default {
             });
           }
 
-
-  
           const moveToSide = (track, currentSlide, targetSlide) => {
               track.style.transform = `translateX(-${targetSlide.style.left})`;
               currentSlide.classList.remove(flagClassName);
@@ -89,6 +87,8 @@ export default {
             moveToSide(track, currentSlide, targetSlide);
             updateDots(currentDot, targetDot);
           });
+          }
+          
         
       });
     });
