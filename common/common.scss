@@ -35,6 +35,21 @@
   width: 100%;
 }
 
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+}
+
+.carousel-btn-left {
+  left: -30px;
+}
+.carousel-btn-right {
+  right: -30px;
+}
+
 .event-banner-title::after {
   content: "";
   position: absolute;
