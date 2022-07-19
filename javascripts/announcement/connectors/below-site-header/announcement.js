@@ -10,11 +10,11 @@ export default {
       api.onPageChange(() => {
         if (settings.show_on === 'homepage') {
           const track = document.querySelector('.carousel-track');
-          const slides = Array.from(track.children);
+          const slides = track? Array.from(track.children) : null;
           const prevBtn = document.querySelector('.carousel-btn-left');
           const nextBtn = document.querySelector('.carousel-btn-right');
           const dotsNav = document.querySelector('.dots');
-          const dots = Array.from(dotsNav.children);
+          const dots = dotsNav? Array.from(dotsNav.children) : null;
           const flagClassName = 'currentSlide';
   
           const slideWidth = slides[0].getBoundingClientRect().width;
