@@ -49,6 +49,7 @@
   background: transparent;
   font-size: 1.7rem;
   border: 0;
+  display: none;
 }
 
 .carousel-btn-left {
@@ -179,29 +180,11 @@
   .announcement .custom-container {
     padding: 3%;
     height: 35vh;
-    // chang
   }
-  // .dots {
-  //   display: none;
-  // }
-
-  // .event-body-container::after, .event-body-container::before {
-  //   display: block;
-  //   --side-offset: -2rem;
-  //   position: absolute;
-  //   font-size: 1.5rem;
-  //   color: var(--psuedo-ele-clr);
-  //   font-weight: 900;
-  //   cursor: pointer;
-  // }
-  
-  // .event-body-container::before {
-  //   content: "<";
-  //   left: var(--side-offset);
-  // }
-  // .event-body-container::after {
-  //   content: ">";
-  //   position: absolute;
-  //   right: var(--side-offset);
-  // }
+  .dots {
+    display: none;
+  }
+  .carousel-btn {
+    display: block;
+  }
 }
