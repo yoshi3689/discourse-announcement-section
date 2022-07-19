@@ -7,13 +7,32 @@
 
 .announcement {
   background-color: #94C367;
+  position: relative;
 }
 
 .announcement .custom-container {
   padding: 0;
+  height: 35vh;
 }
 .event-banner {
   font-family: "Roboto Slab";
+}
+
+.carousel-track-container {
+  background-color: red;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  list-style-type: none;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .event-banner-title::after {
@@ -66,7 +85,7 @@
   grid-column: 3;
 }
 
-.event-body-wrapper {
+.carousel-track-container {
   --psuedo-ele-clr: rgb(221, 222, 227);
   margin: auto;
   padding: 3rem 0;
