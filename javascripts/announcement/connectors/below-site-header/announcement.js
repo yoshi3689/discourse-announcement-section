@@ -26,6 +26,11 @@ export default {
           targetSlide.classList.add(flagClassName);
         }
 
+        const updateDots = (currentDot, targetDot) => {
+          currentDot.classList.remove('currentDot');
+          targetDot.classList.add('currentDot');
+        }
+
         prevBtn.addEventListener('click', (e) => {
           const currentSlide = track.querySelector(`.${flagClassName}`);
           const prevSlide = currentSlide.previousElementSibling;
@@ -38,7 +43,18 @@ export default {
           moveToSide(track, currentSlide, nextSlide);
         });
 
-        // dotsNav.
+        dotsNav.addEventListener('click', e => {
+          const targetDot = e.target.closest('button');
+          if (!targetDot) return;
+
+          const currentSlide = track.querySelector(`.${flagClassName}`);
+          const currentDot = dotsNav.querySelector(`.currentDot`);
+          const targetIndex = dots.findIndex(dot => dot === targetDot);
+          const targetSlide = slides[targetIndex];
+
+          moveToSide(track, currentSlide, targetSlide);
+          updateDots(currentDot, targetDot);
+        });
 
       });
     });
