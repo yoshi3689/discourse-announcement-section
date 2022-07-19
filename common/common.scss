@@ -61,6 +61,7 @@
   position: relative;
   margin: 0;
 }
+
 .event-banner-title::after {
   content: "";
   position: absolute;
@@ -123,9 +124,9 @@
   width: max-content;
 }
 
-// .event-body-container {
-//   width: 80vw;
-// }
+.currentDot {
+  opacity: 1;
+}
 
 .event-body-container::after, .event-body-container::before {
   display: none;
