@@ -8,7 +8,7 @@ export default {
 
     withPluginApi("0.11", (api) => {
       api.onPageChange(() => {
-        if (window.location.href === '/') {
+        
           const track = document.querySelector('.carousel-track');
           const slides = track? Array.from(track.children) : null;
           const prevBtn = document.querySelector('.carousel-btn-left');
@@ -61,7 +61,7 @@ export default {
             moveToSide(track, currentSlide, targetSlide);
             updateDots(currentDot, targetDot);
           });
-        }
+        
       });
     });
   },
