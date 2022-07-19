@@ -53,7 +53,7 @@ export default {
             const currentSlide = track.querySelector(`.${flagClassName}`);
             moveIndex(-1);
             const prevSlide = slides[currentIndex];
-            const currentDot = dots.querySelector(`.currentDot`);
+            const currentDot = dotsNav.querySelector(`.currentDot`);
             const prevDot = dots[currentIndex];
 
             moveToSide(track, currentSlide, prevSlide);
@@ -64,7 +64,7 @@ export default {
             const currentSlide = track.querySelector(`.${flagClassName}`);
             moveIndex(1);
             const nextSlide = slides[currentIndex];
-            const currentDot = dots.querySelector(`.currentDot`);
+            const currentDot = dotsNav.querySelector(`.currentDot`);
             const nextDot = dots[currentIndex];
             moveToSide(track, currentSlide, nextSlide);
             updateDots(currentDot, nextDot);
