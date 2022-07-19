@@ -24,7 +24,7 @@ export default {
             console.log(targetIndex);
             if (targetIndex < 0) {
               currentIndex = slides.length - 1;
-            } else if (currentIndex > slides.length - 1) {
+            } else if (targetIndex > slides.length - 1) {
               currentIndex = 0;
             } else {
               currentIndex = targetIndex;
