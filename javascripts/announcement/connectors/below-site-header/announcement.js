@@ -31,12 +31,18 @@ export default {
             }
           }
   
-          const slideWidth = slides? slides[0].getBoundingClientRect().width : null;
+          let slideWidth = slides? slides[0].getBoundingClientRect().width : null;  
+          document.addEventListener('resize', e => {
+            slideWidth = slides? slides[0].getBoundingClientRect().width : null;  
+          });
+
           if (slides) {
             slides.forEach((slide, i) => {
               slide.style.left = `${slideWidth * i}px`;
             });
           }
+
+
   
           const moveToSide = (track, currentSlide, targetSlide) => {
               track.style.transform = `translateX(-${targetSlide.style.left})`;
