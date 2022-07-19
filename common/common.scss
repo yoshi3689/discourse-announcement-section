@@ -85,12 +85,20 @@
   grid-column: 3;
 }
 
-.carousel-track-container {
+// .carousel-track-container {
+//   --psuedo-ele-clr: rgb(221, 222, 227);
+//   margin: auto;
+//   padding: 3rem 0;
+//   color: #fff;
+//   // overflow: hidden;
+// }
+
+.event-body-wrapper {
   --psuedo-ele-clr: rgb(221, 222, 227);
   margin: auto;
   padding: 3rem 0;
   color: #fff;
-  // overflow: hidden;
+  // over
 }
 
 .withSwitch {
