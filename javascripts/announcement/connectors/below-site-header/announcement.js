@@ -18,6 +18,18 @@ export default {
           const flagClassName = 'currentSlide';
 
           let currentIndex = 0;
+
+          const moveIndex = offset => {
+            const targetIndex = currentIndex + offset;
+            console.log(targetIndex);
+            if (targetIndex < 0) {
+              currentIndex = slides.length - 1;
+            } else if (currentIndex > slides.length - 1) {
+              currentIndex = 0;
+            } else {
+              currentIndex = targetIndex;
+            }
+          }
   
           const slideWidth = slides? slides[0].getBoundingClientRect().width : null;
           if (slides) {
@@ -27,40 +39,22 @@ export default {
           }
   
           const moveToSide = (track, currentSlide, targetSlide) => {
-            if (currentIndex < 0) {
-              track.style.transform = `translateX(-${slides[slides.length - 1].style.left})`;
-              currentSlide.classList.remove(flagClassName);
-              slides[slides.length - 1].classList.add(flagClassName);
-              currentIndex = slides.length - 1;
-            } else if (currentIndex > slides.length - 1) {
-              track.style.transform = `translateX(-${slides[0].style.left})`;
-              currentSlide.classList.remove(flagClassName);
-              slides[0].classList.add(flagClassName);
-              currentIndex = 0;
-            } else {
               track.style.transform = `translateX(-${targetSlide.style.left})`;
               currentSlide.classList.remove(flagClassName);
               targetSlide.classList.add(flagClassName);
-            }
           }
   
           const updateDots = (currentDot, targetDot) => {
-            // if (currentIndex < 0) {
-
-            // } else if (currentIndex > slides.length - 1) {
-
-            // } else {
-            
-            // }
             currentDot.classList.remove('currentDot');
-            dotsNav[currentIndex].classList.add('currentDot');
+            targetDot.classList.add('currentDot');
           }
   
           prevBtn.addEventListener('click', (e) => {
             const currentSlide = track.querySelector(`.${flagClassName}`);
-            const prevSlide = currentSlide.previousElementSibling;
+            moveIndex(-1);
+            const prevSlide = slides[currentIndex];
             const currentDot = dotsNav.querySelector(`.currentDot`);
-            const prevDot = currentDot.previousElementSibling;
+            const prevDot = dotsNav[currentIndex];
 
             moveToSide(track, currentSlide, prevSlide);
             updateDots(currentDot, prevDot);
@@ -68,10 +62,10 @@ export default {
   
           nextBtn.addEventListener('click', (e) => {
             const currentSlide = track.querySelector(`.${flagClassName}`);
-            const nextSlide = currentSlide.nextElementSibling;
+            moveIndex(1);
+            const nextSlide = slides[currentIndex];
             const currentDot = dotsNav.querySelector(`.currentDot`);
-            const nextDot = currentDot.nextElementSibling;
-            currentIndex++;
+            const nextDot = dotsNav[currentIndex];
             moveToSide(track, currentSlide, nextSlide);
             updateDots(currentDot, nextDot);
           });
