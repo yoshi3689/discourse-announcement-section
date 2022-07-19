@@ -38,15 +38,20 @@ export default {
           prevBtn.addEventListener('click', (e) => {
             const currentSlide = track.querySelector(`.${flagClassName}`);
             const prevSlide = currentSlide.previousElementSibling;
+            const currentDot = dotsNav.querySelector(`.currentDot`);
+            const prevDot = currentDot.previousElementSibling;
             moveToSide(track, currentSlide, prevSlide);
-            updateDots(currentDot, targetDot);
+            updateDots(currentDot, prevDot);
           });
   
           nextBtn.addEventListener('click', (e) => {
             const currentSlide = track.querySelector(`.${flagClassName}`);
             const nextSlide = currentSlide.nextElementSibling;
+            const currentDot = dotsNav.querySelector(`.currentDot`);
+            const nextDot = currentDot.nextElementSibling;
+
             moveToSide(track, currentSlide, nextSlide);
-            updateDots(currentDot, targetDot);
+            updateDots(currentDot, nextDot);
           });
   
           dotsNav.addEventListener('click', e => {

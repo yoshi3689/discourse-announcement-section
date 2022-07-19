@@ -29,12 +29,12 @@
   height: 80%;
   position: relative;
   overflow: hidden;
-  height: 80%;
   position: relative;
 }
 
 .carousel-track {
   list-style-type: none;
+  transition: all 200ms ease-in 0s;
 }
 
 .carousel-slide {
