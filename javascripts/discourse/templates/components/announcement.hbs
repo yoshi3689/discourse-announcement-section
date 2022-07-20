@@ -4,48 +4,54 @@
   <button class="carousel-btn carousel-btn-left">&#x2190;</button>
   <div class="carousel-track-container">
     <ul class="carousel-track">
+      {{if #announcement.img1}}
       <li class="carousel-slide currentSlide">
         <div class="event-body-wrapper">
           <div class="event-body-container">
             <a class="event-img-wrapper" href="#">
-              <img src="https://goodtogrowproducts.com/wp-content/uploads/2022/01/Grow-Your-Food-Business-e1641532722839.png" alt="" class="event-img">
+              <img src={{html-safe (theme-i18n "announcement.img3")}} alt="" class="event-img">
             </a>
             <div class="event-content-container">
-              <h2>{{html-safe (theme-i18n "announcement.title1")}}</h2>
-              <p>{{html-safe (theme-i18n "announcement.content1")}}</p>
-              <a class="cta-text" href={{html-safe (theme-i18n "announcement.link1")}}><b class="nav-link">Learn more</b></a>
+              <h2>{{html-safe (theme-i18n "announcement.title3")}}</h2>
+              <p>{{html-safe (theme-i18n "announcement.content3")}}</p>
+              <a class="cta-text" href={{html-safe (theme-i18n "announcement.link3")}}><b class="nav-link">Learn more</b></a>
             </div>
           </div>
         </div>
       </li>
-      <li class="carousel-slide">
+      {{/if}}
+      {{if #announcement.img2}}
+      <li class="carousel-slide currentSlide">
         <div class="event-body-wrapper">
           <div class="event-body-container">
-          <a class="event-img-wrapper" href="#">
-            <img src="https://goodtogrowproducts.com/wp-content/uploads/2022/01/Grow-Your-Food-Business-e1641532722839.png" alt="" class="event-img">
-          </a>
-          <div class="event-content-container">
-            <h2>{{html-safe (theme-i18n "announcement.title1")}}</h2>
-            <p>{{html-safe (theme-i18n "announcement.content1")}}</p>
-            <a class="cta-text" href={{html-safe (theme-i18n "announcement.link1")}}><b class="nav-link">Learn more</b></a>
+            <a class="event-img-wrapper" href="#">
+              <img src={{html-safe (theme-i18n "announcement.img2")}} alt="" class="event-img">
+            </a>
+            <div class="event-content-container">
+              <h2>{{html-safe (theme-i18n "announcement.title2")}}</h2>
+              <p>{{html-safe (theme-i18n "announcement.content2")}}</p>
+              <a class="cta-text" href={{html-safe (theme-i18n "announcement.link2")}}><b class="nav-link">Learn more</b></a>
+            </div>
           </div>
         </div>
-        </div>
       </li>
-      <li class="carousel-slide">
+      {{/if}}
+      {{if #announcement.img3}}
+      <li class="carousel-slide currentSlide">
         <div class="event-body-wrapper">
           <div class="event-body-container">
-          <a class="event-img-wrapper" href="#">
-            <img src="https://goodtogrowproducts.com/wp-content/uploads/2022/01/Grow-Your-Food-Business-e1641532722839.png" alt="" class="event-img">
-          </a>
-          <div class="event-content-container">
-            <h2>{{html-safe (theme-i18n "announcement.title1")}}</h2>
-            <p>{{html-safe (theme-i18n "announcement.content1")}}</p>
-            <a class="cta-text" href={{html-safe (theme-i18n "announcement.link1")}}><b class="nav-link">Learn more</b></a>
+            <a class="event-img-wrapper" href="#">
+              <img src={{html-safe (theme-i18n "announcement.img3")}} alt="" class="event-img">
+            </a>
+            <div class="event-content-container">
+              <h2>{{html-safe (theme-i18n "announcement.title3")}}</h2>
+              <p>{{html-safe (theme-i18n "announcement.content3")}}</p>
+              <a class="cta-text" href={{html-safe (theme-i18n "announcement.link3")}}><b class="nav-link">Learn more</b></a>
+            </div>
           </div>
         </div>
-        </div>
       </li>
+      {{/if}}
     </ul>
   </div> 
   <button class="carousel-btn carousel-btn-right">&#x2192;</button>
