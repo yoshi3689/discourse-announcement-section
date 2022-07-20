@@ -42,6 +42,7 @@ export default {
 
           track.addEventListener('resize', e => {
             adjustWidth();
+            console.log('a');
           });
 
           
