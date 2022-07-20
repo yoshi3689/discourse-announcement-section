@@ -8,7 +8,6 @@
 .announcement {
   background-color: #94C367;
   position: relative;
-  padding: 5% 0;
 }
 
 .announcement .custom-container {
@@ -16,6 +15,7 @@
   --psuedo-ele-clr: rgb(221, 222, 227);
   margin: auto;
   color: #fff;
+  padding: 5% 0;
 }
 .event-banner {
   font-family: "Roboto Slab";
@@ -173,7 +173,7 @@
 }
 
 @media screen and (min-width: 800px) {
-  .announcement {
+  .announcement .custom-container {
     padding: 3% 0;
   }
   .event-body-container {
