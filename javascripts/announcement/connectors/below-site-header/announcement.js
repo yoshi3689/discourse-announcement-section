@@ -39,7 +39,6 @@ export default {
           });
           // will come back and change these later
           if (dots && slides && prevBtn && nextBtn &&dotsNav) {
-
           window.addEventListener('resize', e => {
             adjustWidth();
           });
