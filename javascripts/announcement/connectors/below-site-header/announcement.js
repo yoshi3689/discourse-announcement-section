@@ -7,7 +7,6 @@ export default {
 
     withPluginApi("0.11", (api) => {
       api.onPageChange(() => {
-        const eventBanner = document.querySelector('.event-banner');
         const trackContainer = document.querySelector('.carousel-track-container');
         const track = document.querySelector('.carousel-track');
         const slides = track ? Array.from(track.children) : null;
@@ -43,13 +42,18 @@ export default {
         }
 
         if (dots && slides && prevBtn && nextBtn && dotsNav) {
-          adjustWidthAndHeight();
+          
 
           // will come back and change these later
           if (dots && slides && prevBtn && nextBtn && dotsNav) {
+            window.addEventListener('load', e => {
+              adjustWidthAndHeight();
+            })
             window.addEventListener('resize', e => {
               adjustWidthAndHeight();
             });
+
+
 
 
 
