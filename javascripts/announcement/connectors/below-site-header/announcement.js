@@ -8,6 +8,7 @@ export default {
     withPluginApi("0.11", (api) => {
       api.onPageChange(() => {
         const eventBanner = document.querySelector('.event-banner');
+        const trackContainer = document.querySelector('.carousel-track-container');
         const track = document.querySelector('.carousel-track');
         const slides = track ? Array.from(track.children) : null;
         const prevBtn = document.querySelector('.carousel-btn-left');
@@ -39,6 +40,7 @@ export default {
             slide.style.left = `${slideWidth * i}px`;
           });
           eventBanner.style.height = `${slideHeight + 44.8 + 90.4+22.4}px`
+          trackContainer.style.height = `${slideHeight}px`
         }
 
         if (dots && slides && prevBtn && nextBtn && dotsNav) {
