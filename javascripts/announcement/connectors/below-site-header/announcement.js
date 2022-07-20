@@ -32,17 +32,16 @@ export default {
           let slideWidth;
           const adjustWidth = () => {
             slideWidth = slides[0].getBoundingClientRect().width;  
-            slides.forEach((slide, i) => {
-              slide.style.left = `${slideWidth * i}px`;
-            });
           }
           adjustWidth();
+          slides.forEach((slide, i) => {
+            slide.style.left = `${slideWidth * i}px`;
+          });
           // will come back and change these later
           if (dots && slides && prevBtn && nextBtn &&dotsNav) {
 
           window.addEventListener('resize', e => {
             adjustWidth();
-            console.log('a');
           });
 
           
