@@ -60,6 +60,7 @@
 
 .event-banner-title {
   position: relative;
+  font-size: 2.3em;
   margin: 0;
 }
 
@@ -68,7 +69,7 @@
   position: absolute;
   background-color: var(--psuedo-ele-clr);
   height: 2px;
-  width: 9%;
+  width: 17%;
   bottom: -11px;
   left: 0;
 }
@@ -82,7 +83,7 @@
   height: 190px;
   max-width: 325px;
   margin: 0 auto;
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 .event-img-wrapper::after {
