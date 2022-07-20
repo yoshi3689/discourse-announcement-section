@@ -176,7 +176,8 @@
 @media screen and (min-width: 800px) {
   .event-body-container {
     display: grid;
-    grid-template-columns: 3fr 1fr 6fr;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
     align-items: center;
     position: relative;
   } 

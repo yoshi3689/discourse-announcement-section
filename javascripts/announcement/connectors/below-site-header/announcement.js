@@ -38,7 +38,7 @@ export default {
           slides.forEach((slide, i) => {
             slide.style.left = `${slideWidth * i}px`;
           });
-          eventBanner.style.height = `${slideHeight + 44.8 + 60.4+22.4}px`
+          eventBanner.style.height = `${slideHeight + 44.8 + 90.4+22.4}px`
         }
 
         if (dots && slides && prevBtn && nextBtn && dotsNav) {
