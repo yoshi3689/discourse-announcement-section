@@ -39,7 +39,7 @@ export default {
           slides.forEach((slide, i) => {
             slide.style.left = `${slideWidth * i}px`;
           });
-          trackContainer.style.height = `${slideHeight + 32}px`
+          trackContainer.style.height = `${slideHeight}px`
         }
 
         if (dots && slides && prevBtn && nextBtn && dotsNav) {
