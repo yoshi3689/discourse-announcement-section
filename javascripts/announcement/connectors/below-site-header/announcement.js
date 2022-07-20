@@ -1,7 +1,6 @@
 import {
   withPluginApi
 } from "discourse/lib/plugin-api";
-import { ajaxSettings } from "jquery";
 
 export default {
   setupComponent(attrs, component) {
@@ -33,6 +32,8 @@ export default {
           const adjustWidth = () => {
             slideWidth = slides[0].getBoundingClientRect().width;  
           }
+
+          if (dots && slides && prevBtn && nextBtn &&dotsNav) {
           adjustWidth();
           slides.forEach((slide, i) => {
             slide.style.left = `${slideWidth * i}px`;
@@ -91,7 +92,7 @@ export default {
             updateDots(currentDot, targetDot);
           });
           }
-          
+        }
         
       });
     });
