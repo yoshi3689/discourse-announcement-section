@@ -13,7 +13,6 @@
 
 .announcement .custom-container {
   padding: 0;
-  height: 55vh;
   --psuedo-ele-clr: rgb(221, 222, 227);
   margin: auto;
   color: #fff;
@@ -25,14 +24,13 @@
 .carousel-track-container {
   height: 100%;
   padding: 2rem 0;
-  position: relative;
   overflow: hidden;
-  position: relative;
 }
 
 .carousel-track {
   list-style-type: none;
   transition: all 200ms ease-in 0s;
+  position: relative;
 }
 
 .carousel-slide {
