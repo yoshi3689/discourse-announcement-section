@@ -39,7 +39,7 @@ export default {
           slides.forEach((slide, i) => {
             slide.style.left = `${slideWidth * i}px`;
           });
-          eventBanner.style.height = `${slideHeight + 44.8 + 90.4+ dots.style.display === 'none'?22.4:0}px`
+          eventBanner.style.height = `${slideHeight + 44.8 + 90.4+ dots[0].style.display === 'none'?22.4:0}px`
           trackContainer.style.height = `${slideHeight + 32}px`
         }
 
