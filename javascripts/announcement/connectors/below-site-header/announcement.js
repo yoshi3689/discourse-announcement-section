@@ -29,18 +29,22 @@ export default {
               currentIndex = targetIndex;
             }
           }
-          // will come back and change these later
-          if (dots && slides && prevBtn && nextBtn &&dotsNav) {
-            let slideWidth = slides? slides[0].getBoundingClientRect().width : null;  
-          document.addEventListener('resize', e => {
-            slideWidth = slides? slides[0].getBoundingClientRect().width : null;  
-          });
-
-          if (slides) {
+          let slideWidth;
+          const adjustWidth = () => {
+            slideWidth = slides[0].getBoundingClientRect().width;  
             slides.forEach((slide, i) => {
               slide.style.left = `${slideWidth * i}px`;
             });
           }
+          adjustWidth();
+          // will come back and change these later
+          if (dots && slides && prevBtn && nextBtn &&dotsNav) {
+
+          document.addEventListener('resize', e => {
+            adjustWidth();
+          });
+
+          
 
           const moveToSide = (track, currentSlide, targetSlide) => {
               track.style.transform = `translateX(-${targetSlide.style.left})`;
