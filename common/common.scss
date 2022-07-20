@@ -8,7 +8,7 @@
 .announcement {
   background-color: #94C367;
   position: relative;
-  padding: 3% 0;
+  padding: 5% 0;
 }
 
 .announcement .custom-container {
@@ -172,6 +172,9 @@
 }
 
 @media screen and (min-width: 800px) {
+  .announcement {
+    padding: 3% 0;
+  }
   .event-body-container {
     display: grid;
     grid-template-columns: 325px 1fr;
