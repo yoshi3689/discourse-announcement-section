@@ -77,7 +77,6 @@
 .event-img-wrapper {
   display: block;
   cursor: pointer;
-  grid-column: 1;
   position: relative;
   z-index: 10;
   height: 180px;
@@ -104,10 +103,6 @@
   display: block;
   z-index: 2;
   border-radius: .5rem;
-}
-
-.event-content-container {
-  grid-column: 3;
 }
 
 .withSwitch {
