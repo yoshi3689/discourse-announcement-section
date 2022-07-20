@@ -29,10 +29,11 @@ export default {
           }
         }
         let slideWidth;
+        let slideHeight;
         const adjustWidthAndHeight = () => {
           const sizeInfo = slides[0].getBoundingClientRect();
           slideWidth = sizeInfo.width;
-          slideHeight = sizeInfo.height;
+          slideHeight = sizeInfo;
 
           slides.forEach((slide, i) => {
             slide.style.left = `${slideWidth * i}px`;
