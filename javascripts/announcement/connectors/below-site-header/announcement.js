@@ -40,7 +40,7 @@ export default {
           // will come back and change these later
           if (dots && slides && prevBtn && nextBtn &&dotsNav) {
 
-          document.addEventListener('resize', e => {
+          track.addEventListener('resize', e => {
             adjustWidth();
           });
 
