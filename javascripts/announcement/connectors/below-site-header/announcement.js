@@ -41,11 +41,12 @@ export default {
           trackContainer.style.height = `${slideHeight}px`
         }
 
-        if (dots && slides && prevBtn && nextBtn && dotsNav) {
+        
           
 
           // will come back and change these later
           if (dots && slides && prevBtn && nextBtn && dotsNav) {
+            adjustWidthAndHeight();
             window.addEventListener
             ?window.addEventListener('load', adjustWidthAndHeight)
             :window.attachEvent('onload', adjustWidthAndHeight);
@@ -104,7 +105,6 @@ export default {
               updateDots(currentDot, targetDot);
             });
           }
-        }
 
       });
     });
