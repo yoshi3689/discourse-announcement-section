@@ -46,9 +46,10 @@ export default {
 
           // will come back and change these later
           if (dots && slides && prevBtn && nextBtn && dotsNav) {
-            window.addEventListener('DOMContentLoaded', e => {
-              adjustWidthAndHeight();
-            })
+            window.addEventListener
+            ?window.addEventListener('load', adjustWidthAndHeight)
+            :window.attachEvent('onload', adjustWidthAndHeight);
+            window.addEventListener('popstate', adjustWidthAndHeight);
             window.addEventListener('resize', e => {
               adjustWidthAndHeight();
             });
