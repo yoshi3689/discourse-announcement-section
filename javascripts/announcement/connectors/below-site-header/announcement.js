@@ -46,7 +46,7 @@ export default {
 
           // will come back and change these later
           if (dots && slides && prevBtn && nextBtn && dotsNav) {
-            window.addEventListener('load', e => {
+            window.addEventListener('DOMContentLoaded', e => {
               adjustWidthAndHeight();
             })
             window.addEventListener('resize', e => {
