@@ -34,7 +34,6 @@ export default {
           const sizeInfo = slides[0].getBoundingClientRect();
           slideWidth = sizeInfo.width;
           slideHeight = sizeInfo.height;
-          console.log(slideWidth);
           slides.forEach((slide, i) => {
             slide.style.left = `${slideWidth * i}px`;
           });
@@ -42,10 +41,6 @@ export default {
           track.style.transform = `translateX(-${slides[currentIndex].style.left})`;
         }
 
-        
-          
-
-          // will come back and change these later
           if (dots && slides && prevBtn && nextBtn && dotsNav) {
             adjustWidthAndHeight();
             window.addEventListener
