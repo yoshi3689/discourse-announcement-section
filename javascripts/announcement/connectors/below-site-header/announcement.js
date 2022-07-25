@@ -39,7 +39,7 @@ export default {
             slide.style.left = `${slideWidth * i}px`;
           });
           trackContainer.style.height = `${slideHeight}px`
-          track.style.transform = `translateX(-${slideWidth})`;
+          track.style.transform = `translateX(-${slides[currentIndex].style.left})`;
         }
 
         
