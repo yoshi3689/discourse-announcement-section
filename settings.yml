@@ -22,13 +22,15 @@ show_for:
 
 image_1:
   default: ""
-  description: image for the 1st announcement item in the carousel
+  description: Image for the 1st announcement item in the carousel. If no image is uploaded, <a href="https://goodtogrowproducts.com/wp-content/uploads/2022/01/Grow-Your-Food-Business-e1641532722839.png">this image</a> will be a placeholder for this specific item.
   type: "upload"
+
 image_2:
   default: ""
-  description: image for the 2nd announcement item in the carousel
+  description: Image for the 2nd announcement item in the carousel. If no image is uploaded, <a href="https://goodtogrowproducts.com/wp-content/uploads/2021/12/Copy-of-GTG_TradeShow2021_HighRes-15-1.jpg">this image</a> will be a placeholder for this specific item.
   type: "upload"
+
 image_3:
   default: ""
-  description: image for the 3rd announcement item in the carousel
+  description: Image for the 3rd announcement item in the carousel. If no image is uploaded, <a href="https://goodtogrowproducts.com/wp-content/uploads/2021/11/GTG_TradeShow2021_HighRes-4-1-e1641530803350.jpg">this image</a> will be a placeholder for this specific item.
   type: "upload"
