@@ -110,29 +110,29 @@
 }
 
 #img1 {
-  --fallback-bg-img1: "https://goodtogrowproducts.com/wp-content/uploads/2022/01/Grow-Your-Food-Business-e1641532722839.png";
+  --fallback-bg-img1: url("https://goodtogrowproducts.com/wp-content/uploads/2022/01/Grow-Your-Food-Business-e1641532722839.png");
   @if $image-1 != "none" {
     background-image: url($image-1);
   } @else {
-    background-image: url(var(--fallback-bg-img1));
+    background-image: var(--fallback-bg-img1);
   }
 }
 
 #img2 {
-  --fallback-bg-img2: "https://goodtogrowproducts.com/wp-content/uploads/2021/12/Copy-of-GTG_TradeShow2021_HighRes-15-1.jpg";
+  --fallback-bg-img2: url("https://goodtogrowproducts.com/wp-content/uploads/2021/12/Copy-of-GTG_TradeShow2021_HighRes-15-1.jpg");
   @if $image-2 != "none" {
     background-image: url($image-2);
   } @else {
-    background-image: url(var(--fallback-bg-img2));
+    background-image: var(--fallback-bg-img2);
   }
 }
 
 #img3 {
-  --fallback-bg-img3: "https://goodtogrowproducts.com/wp-content/uploads/2021/11/GTG_TradeShow2021_HighRes-4-1-e1641530803350.jpg";
+  --fallback-bg-img3: url("https://goodtogrowproducts.com/wp-content/uploads/2021/11/GTG_TradeShow2021_HighRes-4-1-e1641530803350.jpg");
   @if $image-3 != "none" {
     background-image: url($image-3);
   } @else {
-    background-image: url(var(--fallback-bg-img3));
+    background-image: var(--fallback-bg-img3);
   }
 }
 
