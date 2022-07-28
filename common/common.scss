@@ -112,9 +112,9 @@
 #img1 {
   --fallback-bg-img1: url("https://goodtogrowproducts.com/wp-content/uploads/2022/01/Grow-Your-Food-Business-e1641532722839.png");
   @if $image-1 == "" {
-    background-image: url($image-1);
-  } @else {
     background-image: var(--fallback-bg-img1);
+  } @else {
+    background-image: url($image-1);
   }
 }
 
