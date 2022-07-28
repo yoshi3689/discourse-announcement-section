@@ -113,7 +113,7 @@
   @if $image-1 != "none" {
     background-image: url($image-1);
   } @else {
-    background-image: var(--fallback-bg-img1);
+    background-image: url(var(--fallback-bg-img1));
   }
 }
 
@@ -122,7 +122,7 @@
   @if $image-2 != "none" {
     background-image: url($image-2);
   } @else {
-    background-image: var(--fallback-bg-img2);
+    background-image: url(var(--fallback-bg-img2));
   }
 }
 
@@ -131,7 +131,7 @@
   @if $image-3 != "none" {
     background-image: url($image-3);
   } @else {
-    background-image: var(--fallback-bg-img3);
+    background-image: url(var(--fallback-bg-img3));
   }
 }
 
