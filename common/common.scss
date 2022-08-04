@@ -23,7 +23,7 @@
 
 .carousel-track-container {
   height: 100%;
-  padding-top: 2rem;
+  margin-top: 2rem;
   overflow: hidden;
 }
 
@@ -210,7 +210,7 @@
   }
   .event-body-container {
     display: grid;
-    grid-template-columns: 325px 1fr;
+    grid-template-columns: 240px 1fr;
     gap: 3rem;
     align-items: center;
     position: relative;
