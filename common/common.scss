@@ -196,9 +196,6 @@
 }
 
 @media screen and (min-width: 450px) {
-  .event-img-wrapper {
-    width: 100%;
-  }
   .event-img-wrapper::after {
     left: 6px;
   }
@@ -210,7 +207,7 @@
   }
   .event-body-container {
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: max-content 1fr;
     gap: 3rem;
     align-items: center;
     position: relative;
