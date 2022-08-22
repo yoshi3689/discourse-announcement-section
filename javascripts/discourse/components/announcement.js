@@ -7,7 +7,7 @@ import discourseComputed, { observes } from "discourse-common/utils/decorators";
 export default Component.extend({
   router: service(),
   tagName: "",
-
+  // determines which page to display this component on
   @discourseComputed("router.currentRouteName")
   displayForRoute(currentRouteName) {
     const showOn = settings.show_on;
@@ -26,6 +26,7 @@ export default Component.extend({
     }
   },
 
+  // determines which user to display this component on
   @discourseComputed("currentUser")
   displayForUser(currentUser) {
     const showFor = settings.show_for;

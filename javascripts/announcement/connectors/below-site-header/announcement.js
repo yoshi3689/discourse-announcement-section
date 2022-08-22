@@ -18,6 +18,7 @@ export default {
 
         let currentIndex = 0;
 
+        // every time a controller element is clicked, this function is invoked
         const moveIndex = offset => {
           const targetIndex = currentIndex + offset;
           if (targetIndex < 0) {
@@ -28,6 +29,8 @@ export default {
             currentIndex = targetIndex;
           }
         }
+
+        // change the width and height of each carousel
         let slideWidth;
         let slideHeight;
         const adjustWidthAndHeight = () => {
@@ -51,21 +54,18 @@ export default {
               adjustWidthAndHeight();
             });
 
-
-
-
-
+            // move tje carousel
             const moveToSide = (track, currentSlide, targetSlide) => {
               track.style.transform = `translateX(-${targetSlide.style.left})`;
               currentSlide.classList.remove(flagClassName);
               targetSlide.classList.add(flagClassName);
             }
-
             const updateDots = (currentDot, targetDot) => {
               currentDot.classList.remove('currentDot');
               targetDot.classList.add('currentDot');
             }
 
+            // on previous button click
             prevBtn.addEventListener('click', (e) => {
               const currentSlide = track.querySelector(`.${flagClassName}`);
               moveIndex(-1);
@@ -77,6 +77,7 @@ export default {
               updateDots(currentDot, prevDot);
             });
 
+            // on next button click
             nextBtn.addEventListener('click', (e) => {
               const currentSlide = track.querySelector(`.${flagClassName}`);
               moveIndex(1);
@@ -87,6 +88,7 @@ export default {
               updateDots(currentDot, nextDot);
             });
 
+            // on dots click
             dotsNav.addEventListener('click', e => {
               const targetDot = e.target.closest('li');
               if (!targetDot) return;
