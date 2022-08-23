@@ -1,4 +1,6 @@
-#
-discourse-announcement-section
+# discourse-announcement-section
 
-This component is designed to present a customer's recent announcements below the search banner
+## functionality
+
+1; edit contents for the announcement in the component setting
+2; transition from one announcement item to another on arrow click or dot click
