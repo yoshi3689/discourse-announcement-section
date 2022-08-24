@@ -218,10 +218,12 @@
     align-items: center;
     position: relative;
   } 
+  // switch from dots to arrows for the carousel control
+  // on bigger screen sizes
   .dots {
     display: none;
   }
   .carousel-btn {
-    display: block;
+    display: block !important;
   }
 }
