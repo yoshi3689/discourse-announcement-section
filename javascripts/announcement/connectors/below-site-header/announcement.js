@@ -21,10 +21,13 @@ export default {
         // every time a controller element is clicked, this function is invoked
         const moveIndex = offset => {
           const targetIndex = currentIndex + offset;
+          // if the calculated index is less than 0
           if (targetIndex < 0) {
             currentIndex = slides.length - 1;
+            // if the calculated index is bigger than the num of slides
           } else if (targetIndex > slides.length - 1) {
             currentIndex = 0;
+            // if the calculated index is within the range of 0 to the num of slides
           } else {
             currentIndex = targetIndex;
           }
@@ -44,6 +47,7 @@ export default {
           track.style.transform = `translateX(-${slides[currentIndex].style.left})`;
         }
 
+        // trigger the size adjustment function on the below events
           if (dots && slides && prevBtn && nextBtn && dotsNav) {
             adjustWidthAndHeight();
             window.addEventListener
@@ -54,7 +58,7 @@ export default {
               adjustWidthAndHeight();
             });
 
-            // move tje carousel
+            // offset the carousel tracker by the size of a slide
             const moveToSide = (track, currentSlide, targetSlide) => {
               track.style.transform = `translateX(-${targetSlide.style.left})`;
               currentSlide.classList.remove(flagClassName);
@@ -65,7 +69,7 @@ export default {
               targetDot.classList.add('currentDot');
             }
 
-            // on previous button click
+            // on previous button click, decrease the value of index by 1
             prevBtn.addEventListener('click', (e) => {
               const currentSlide = track.querySelector(`.${flagClassName}`);
               moveIndex(-1);
@@ -77,7 +81,7 @@ export default {
               updateDots(currentDot, prevDot);
             });
 
-            // on next button click
+            // on next button click, increase the value of index by 1
             nextBtn.addEventListener('click', (e) => {
               const currentSlide = track.querySelector(`.${flagClassName}`);
               moveIndex(1);
@@ -88,7 +92,7 @@ export default {
               updateDots(currentDot, nextDot);
             });
 
-            // on dots click
+            // on dots click, the value of index becomes the position of the dot stating from 0
             dotsNav.addEventListener('click', e => {
               const targetDot = e.target.closest('li');
               if (!targetDot) return;
